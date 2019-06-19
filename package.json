@@ -1,0 +1,26 @@
+{
+  "name": "cukiernia",
+  "version": "1.0.0",
+  "description": "\"# Cukiernia\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pawel-Hadacz/Cukiernia.git"
+  },
+  "author": "Pawel Hadacz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pawel-Hadacz/Cukiernia/issues"
+  },
+  "homepage": "https://github.com/Pawel-Hadacz/Cukiernia#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
