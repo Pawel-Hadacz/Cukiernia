@@ -1,22 +1,18 @@
 
-//const fs = require('rs');
 const express = require('express');
 const bodyparser = require('body-parser');
 const app = express();
 
-app.use(bodyparser.urlencoded());
+const editing = require('./routes/editing');
+const client = require('./routes/client');
 
-app.use('/add-creams',(req,res,next)=>{
-    res.send('<form action="/creams" method="POST"><input type="text" name="nazwa"><button type="submit">Dodaj smak</button></input></form>')
-    });
-app.use('/creams',(req,res)=>{
-    console.log(req.body);
-    res.redirect('/');
-});
+app.use(bodyparser.urlencoded({extended:false}));
 
+app.use(editing);
+app.use(client);
 
-app.use('/',(req,res,next)=>{
-   res.send('<p>strona glowna</p>')
-    });
+app.use((req,res,next)=>{
+    res.status(404).send("<h1>404 ERROR</h1>")
+})
 
 app.listen(3000);
