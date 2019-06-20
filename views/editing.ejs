@@ -1,109 +1,13 @@
-<!DOCTYPE html>
-<html lang="pl-Pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%=Editing %></title>
-    <link rel="stylesheet" href="/css/clientpage.css">
-</head>
+<%- include('partials/header') %>
 <body>
-    <div class="header">
-        <h1>Cukiernia</h1>
-  </div>
-  <div class="nav">
-      <ul>
-      <li><a href="/">Strona główna</a></li>
-      <li><a href="/add-creams">Lody</a></li>
     
-    </ul>
-  </div>
+  <%- include('partials/nav') %>
 <div class="main">  
-    <div class="row">
-    <div class="column">
-        <h2>Cukiernia</h2>
-        <p><b> Wstępny temat mojego projektu to aplikacja www realizująca działania internetowej cukierni w której będzie można skladać zamówienia na cukiernicze produkty np. lody, oraz znalezc opis cukierni wraz z pracownikami. </b></p>
-    </div>
-    <div class="column">
-            <h2>Cukiernia</h2>
-            <p><b> Wstępny temat mojego projektu to aplikacja www realizująca działania internetowej cukierni w której będzie można skladać zamówienia na cukiernicze produkty np. lody, oraz znalezc opis cukierni wraz z pracownikami. </b></p>
-        </div>
-        <div class="column">
-                <h2>Cukiernia</h2>
-                <p><b> Wstępny temat mojego projektu to aplikacja www realizująca działania internetowej cukierni w której będzie można skladać zamówienia na cukiernicze produkty np. lody, oraz znalezc opis cukierni wraz z pracownikami. </b></p>
-         </div>
-  </div>
-<h2>Tabela</h2>
-<table>
-<tr>
-<th><b>Nagłówek</b></th>
-<th><b>Nagłówek</b></th>
-<th><b>Nagłówek</b></th>
-<th><b>Nagłówek</b></th>
-<th><b>Nagłówek</b></th>
-<th><b>Nagłówek</b></th>
-
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
- <td>Produkt</td>
-<td>Produkt</td>
-</tr>
-<tr>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-<td>Produkt</td>
-</tr>
-</table>
-<hr>
-<h2>Lista numerowana</h2>
-<ol>
-<li>Pierwszy</li>
-<li>Drugi</li>
-<li>Trzeci</li>
-<li>Czwarty</li>
-</ol>
-</div> 
-<div class="footer">
-        <p>Stopka</p>
-      </div>
+    <form action="/add-creams" method="POST">
+        <input type="text" name="nazwa" id="nazwa">
+        <button type="submit">Dodaj smak</button>
+    </form>
+</div>
+<%- include('partials/footer') %>
 </body>
 </html>

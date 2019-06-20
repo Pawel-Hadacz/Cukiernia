@@ -1,14 +1,10 @@
 const path = require('path');
 const express = require('express');
 const router = express.Router();
+const LodyControllery = require('../controller/Lod');
 const Lody = [];
 
-router.get('/add-creams',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','editing.html'));
-   });
-router.post('/creams',(req,res,next)=>{
-    Lody.push({nazwa: req.body.nazwa});
-    res.redirect('/');
-});
-exports.routes = router;
-exports.Lody = Lody;
+router.get('/add-creams',LodyControllery.AddLodController);
+router.post('/add-creams',LodyControllery.AddLodController2);
+
+module.exports = router;
