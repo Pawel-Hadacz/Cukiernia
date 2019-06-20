@@ -3,19 +3,25 @@
     
   <%- include('partials/nav') %>
 <div class="main">  
-    <form action="/add-creams" method="POST">
-        <input type="text" name="smak" id="nazwa">
-        <button type="submit">Dodaj smak</button>
-        
-        <input type="text" name="smak" id="nazwa">
-        <button type="submit">Dodaj smak</button>
-        
-        <input type="text" name="smak" id="nazwa">
-        <button type="submit">Dodaj smak</button>
-       
-        <input type="text" name="smak" id="nazwa">
-        <button type="submit">Dodaj smak</button>
-    </form>
+  <form class="fomrularz" action="/add-creams" method="POST">
+    <div class="formc">
+        <label for="smak">smak</label>
+        <input type="text" name="title" id="title">
+    </div>
+    <div class="formc">
+      <label for="cena">cena</label>
+      <input type="text" name="cena" id="cena">
+  </div>
+  <div class="formc">
+    <label for="waga">waga</label>
+    <input type="text" name="waga" id="waga">
+</div>
+<div class="formc">
+  <label for="dataWaznosci">dataWaznosci</label>
+  <input type="text" name="dataWaznosci" id="dataWaznosci">
+</div>
+    <button class="buttonx" type="submit">Dodaj </button>
+</form>
 </div>
 <%- include('partials/footer') %>
 </body>

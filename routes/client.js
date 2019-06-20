@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 const LodyStore = require('./editing');
 const LodyControllery = require('../controller/Lod');
+const DisplayControllery = require('../controller/display');
+const {check} = require = require('express-validator/check');
 
-router.get('/',LodyControllery.AddClientController);
+router.get('/',DisplayControllery.AddClientController);
+router.get('/creams',DisplayControllery.getCreams);
 module.exports = router;    
