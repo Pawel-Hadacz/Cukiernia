@@ -20,14 +20,17 @@
             <% for (let smak of smaki) { %>
             <article class="Lody-element">
                 <header class="lody-nag">
-                    <h4 class="nazwa-lodu"><%= smak.nazwa %></h4>
+                    <h4 class="nazwa-lodu"><%= smak.smak %></h4>
                 </header>
                 <div class="lod-cena">
-                    <h5 class="cena">5zł</h5>
+                    <h5 class="cena"><%= smak.cena %></h5>
                 </div>
                 <div class="lod-waga">
-                  <h5 class="waga">0.5</h5>
+                  <h5 class="waga"><%= smak.waga %></h5>
               </div>
+              <div class="lod-waznosci">
+                <h5 class="waga"><%= smak.dataWaznosci %></h5>
+            </div>
                 <div class="lod-dodawanie">
                     <button class="btn">Wybierz</button>
                 </div>

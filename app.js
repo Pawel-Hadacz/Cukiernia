@@ -1,4 +1,4 @@
-
+const db = require('./database/db');
 const express = require('express');
 const bodyparser = require('body-parser');
 const app = express();
@@ -9,6 +9,14 @@ app.set('views','views');
 
 const LodyStore = require('./routes/editing');
 const client = require('./routes/client');
+
+db.execute('SELECT * FROM Lody')
+.then(result=>{
+    console.log(result[0],result[1]);
+})
+.catch(err=>{
+    console.log(err)
+});
 
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public')));
