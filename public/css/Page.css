@@ -1,3 +1,7 @@
+body{
+    padding: 0;
+    margin: 0;
+}
 .header {
     width: auto;
     height: 100%;
@@ -16,6 +20,11 @@ background-color: #925f4f;
 text-align: center; 
 padding: 0;
 margin: 0;
+}
+.nav ul{
+    
+    padding: 0;
+    margin: 0;
 }
 .nav li {
 display: inline-block;

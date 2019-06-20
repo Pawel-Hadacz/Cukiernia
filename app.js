@@ -2,13 +2,18 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const app = express();
+const path = require('path');
 
-const editing = require('./routes/editing');
+//app.set('view engine', 'ejs');
+//app.set('views','views');
+
+const LodyStore = require('./routes/editing');
 const client = require('./routes/client');
 
 app.use(bodyparser.urlencoded({extended:false}));
+app.use(express.static(path.join(__dirname,'public')));
 
-app.use(editing);
+app.use(LodyStore.routes);
 app.use(client);
 
 app.use((req,res,next)=>{

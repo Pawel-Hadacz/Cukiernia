@@ -1,0 +1,141 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    width: auto;
+    height: 100%;
+    overflow: auto;
+    background-image:linear-gradient(to right, rgba(105, 103, 103, 0), rgb(82, 48, 48)), url("baner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%,100%;
+    position: relative;
+    color: white;  
+    text-align: center;           
+}
+
+.nav{
+background-color: #925f4f; 
+text-align: center; 
+padding: 0;
+margin: 0;
+}
+.nav ul{
+    
+    padding: 0;
+    margin: 0;
+}
+.nav li {
+display: inline-block;
+font-size: 30px;
+padding: 20px;
+}
+.nav a:link{
+color: antiquewhite;
+background-color: #925f4f;
+text-decoration: none;
+}
+.nav a:visited{
+color: antiquewhite;
+background-color: #925f4f;
+text-decoration: none;
+}
+.nav a:hover{
+color: antiquewhite;
+background-color: #49281e;
+text-decoration: none;
+}
+.nav a:active{
+color: antiquewhite;
+background-color: #49281e;
+text-decoration: none;
+}
+.main {
+height:70%;
+background-color: #E7F3FF;
+color: rgb(78, 59, 23);
+font-size: 20px;
+overflow: auto;
+text-align: justify;
+}
+.main h1{
+color: rgb(34, 34, 31);
+margin-left :10px;
+font-size: 40px;
+}
+.column {
+float: left;
+width: 33.33%;
+}
+.column p{
+text-align: center;
+margin-left: 2px;}
+
+.column h2{
+    text-align: center;
+}
+
+th, td {
+
+width:auto;
+padding: 5px;
+text-align: left;
+border-bottom: 2px solid grey;
+border-top: 2px solid grey;
+border-left:2px solid grey;
+border-right: 2px solid grey;
+vertical-align: bottom;
+}
+th{
+background-color: azure;
+color: rgb(70, 160, 190)
+}
+td{
+background-color: rgb(70, 160, 190);
+color: azure;
+}
+ol {list-style-type: hiragana;}
+img{   
+border: 4px solid rgb(95, 110, 114);
+border-radius: 4px;
+
+width: 300px;
+}
+
+
+
+.Lody-element{
+    text-align: center;
+    margin:0;
+   
+  justify-content: space-around;
+  align-items: stretch;
+}
+.lod-dodanie{
+    padding: 1rem;
+    text-align: center;
+}
+.footer {
+height: 15%;
+background-color: rgb(31, 22, 22);
+color: white;
+text-align: center;
+font-size: 16px;
+overflow: auto;
+}
+@Media print {
+.nav{
+    display: none;
+}
+.main{
+    font-family: Times New Roman;
+}
+.header
+.column,
+.footer{
+    font-family: Times New Roman;
+}
+
+
+}
