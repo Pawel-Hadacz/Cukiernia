@@ -35,7 +35,12 @@ exports.AddLodController = (req,res,next)=>{
       });
    }
     exports.AddLodController2 = (req,res,next)=>{
-     const lod  = new Lody(req.body.smak);
+    const smak = req.body.smak;
+    const cena = req.body.cena;
+    const waga = req.body.waga;
+    const dataWaznosci = req.body.dataWaznosci;
+     const lod = new Lody(null,smak, cena, waga, dataWaznosci);
+     console.log(lod);
      lod.save();
     res.redirect('/');
 }
@@ -45,7 +50,7 @@ exports.ToDBController = (req, res, next) => {
     const cena = req.body.cena;
     const waga = req.body.waga;
     const dataWaznosci = req.body.dataWaznosci;
-    const lody = new Lody(null, smak, cena, waga, dataWaznosci);
+    const lody = new Lody(smak, cena, waga, dataWaznosci);
     lody
       .save()
       .then(() => {

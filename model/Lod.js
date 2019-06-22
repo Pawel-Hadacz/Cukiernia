@@ -10,7 +10,7 @@ module.exports = class Lod {
     }
     save() {
       return db.execute(
-        'INSERT INTO Lody (smak, cena, waga, dataWaznosci) VALUES (?, ?, ?, ?)',
+       'INSERT INTO Lody (smak, cena, waga, dataWaznosci) VALUES (?, ?, ?, ?)',
         [this.smak, this.cena, this.waga, this.dataWaznosci]
       );
     }

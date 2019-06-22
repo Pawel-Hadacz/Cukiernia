@@ -106,16 +106,18 @@ width: 300px;
 
 
 .Lody-element{
+    box-shadow: inset 3px 3px 3px #49281e;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
     text-align: center;
-    margin:0;
-   
-  justify-content: space-around;
-  align-items: stretch;
+    padding: 2px;
 }
-.lod-dodanie{
-    padding: 1rem;
-    text-align: center;
+.lod-dodawanie{
+    display: inline-block;
+    align-items: center;
 }
+
 .footer {
 height: 15%;
 background-color: rgb(31, 22, 22);
@@ -128,8 +130,12 @@ overflow: auto;
 .nav{
     display: none;
 }
+.Lody-element{
+    
+}
 .main{
     font-family: Times New Roman;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 .header
 .column,
