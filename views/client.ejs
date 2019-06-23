@@ -16,8 +16,9 @@
                 <p><b> Wstępny temat mojego projektu to aplikacja www realizująca działania internetowej cukierni w której będzie można skladać zamówienia na cukiernicze produkty np. lody, oraz znalezc opis cukierni wraz z pracownikami. </b></p>
          </div>
         </div>
-        
+
             <% for (let smak of smaki) { %>
+                
             <article class="Lody-element">
                 <header class="lody-nag">
                     <h4 class="nazwa-lodu"><%= smak.smak %></h4>
@@ -31,11 +32,15 @@
               <div class="lod-waznosci">
                 <h5 class="waga"><%= smak.dataWaznosci %></h5>
             </div>
+            <div class="cukiernik-cena">
+                <h4 class="cena"><%= smak.FK_idCukiernik %></h5>
+            </div>
                 <div class="lod-dodawanie">
                     <button class="btn">Wybierz</button>
                 </div>
             </article>
             <% } %>
+         
             
            
         </div> 

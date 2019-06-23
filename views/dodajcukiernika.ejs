@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<body>
+    
+  <%- include('partials/nav') %>
+<div class="main">  
+  <form class="fomrularz" action="/dodajcukiernika" method="POST">
+    <div class="formc">
+        <label for="imie">imie</label>
+        <input type="text" name="imie" id="imie" >
+    </div>
+    <div class="formc">
+      <label for="nazwisko">nazwisko</label>
+      <input type="text" name="nazwisko" id="nazwisko" >
+  </div>
+  <div class="formc">
+    <label for="wiek">wiek</label>
+    <input type="text" name="wiek" id="wiek" >
+</div>
+    <button class="buttonx" type="submit">Dodaj </button>
+</form>
+</div>
+<%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<body>
+    <%- include('partials/nav') %>
+<div class="main">  
+    
+        
+            <% for (let c of cuk) { %>
+            <article class="Lody-element">
+                <header class="Cukiernik-nag">
+                    <h4 class="nazwa-Cukiernika"><%= c.imie %></h4>
+                </header>
+                <div class="cukiernik-cena">
+                    <h4 class="cena"><%= c.nazwisko %></h5>
+                </div>
+                <div class="cukiernik-waga">
+                  <h4 class="waga"><%= c.wiek %></h5>
+              </div>
+              
+                <div class="cukiernik-dodawanie">
+                    <button class="btn">Wybierz</button>
+                </div>
+            </article>
+            <% } %>
+            
+           
+        </div> 
+
+      </div>
+
+<%- include('partials/footer') %>
+</body>
+</html>

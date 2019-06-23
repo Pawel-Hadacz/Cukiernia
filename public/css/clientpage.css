@@ -106,11 +106,12 @@ width: 300px;
 
 
 .Lody-element{
-    box-shadow: inset 3px 3px 3px #49281e;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
+    box-shadow: 3px 3px 3px #49281e;
+    
+    border: inherit rgb(2, 2, 2);
+  
     text-align: center;
+   
     padding: 2px;
 }
 .lod-dodawanie{

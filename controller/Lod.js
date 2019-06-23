@@ -39,7 +39,8 @@ exports.AddLodController = (req,res,next)=>{
     const cena = req.body.cena;
     const waga = req.body.waga;
     const dataWaznosci = req.body.dataWaznosci;
-     const lod = new Lody(null,smak, cena, waga, dataWaznosci);
+    const FK_idCukiernik = req.body.FK_idCukiernik;
+     const lod = new Lody(null,smak, cena, waga, dataWaznosci,FK_idCukiernik);
      console.log(lod);
      lod.save();
     res.redirect('/');
