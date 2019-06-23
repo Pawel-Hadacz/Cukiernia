@@ -11,4 +11,5 @@ router.get('/',DisplayControllery.AddClientController);
 router.get('/creams',DisplayControllery.getCreams);
 router.get('/cukiernicy',DisplayControllery.getCukiernik);
 router.get('/',DisplayControllery.AddClientCukiernikController);
+//router.post('/creams',DisplayControllery.postDelete);
 module.exports = router;    

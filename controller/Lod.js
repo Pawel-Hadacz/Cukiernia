@@ -27,6 +27,17 @@ exports.FromDBlody = (req, res, next) => {
       });
     });
   };
+  exports.postDelete = (req, res, next) => {
+    const smak = req.body.smak;
+    lod.delete(smak);
+    res.redirect('/');
+  };
+  exports.UsunLodyKontroler = (req,res,next)=>{
+    res.render('usunlody', {
+        Head: 'usuwanie lodów',
+        path: '/usunlody',
+      });
+   }
 
 exports.AddLodController = (req,res,next)=>{
     res.render('editing', {
@@ -34,6 +45,19 @@ exports.AddLodController = (req,res,next)=>{
         path: '/editing',
       });
    }
+   exports.postDelete = (req, res, next) => {
+    const id = req.body.id;
+    const smak = req.body.smak;
+    const cena = req.body.cena;
+    const waga = req.body.waga;
+    const dataWaznosci = req.body.dataWaznosci;
+    const FK_idCukiernik = req.body.FK_idCukiernik;
+    const lod = new Lody(id,smak, cena, waga, dataWaznosci,FK_idCukiernik);
+     
+    lod.delete();
+    console.log(lod);
+    res.redirect('/');
+  };
     exports.AddLodController2 = (req,res,next)=>{
     const smak = req.body.smak;
     const cena = req.body.cena;

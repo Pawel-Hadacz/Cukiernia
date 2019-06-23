@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<body>
+    
+  <%- include('partials/nav') %>
+<div class="main">  
+  <form class="fomrularz" action="/usunlody" method="POST">
+    <div class="formc">
+        <label for="id">id</label>
+        <input type="text" name="id" id="id" >
+    </div>
+    <div class="formc">
+        <label for="smak">smak</label>
+        <input type="text" name="smak" id="smak" >
+    </div>
+    <div class="formc">
+      <label for="cena">cena</label>
+      <input type="text" name="cena" id="cena" >
+  </div>
+  <div class="formc">
+    <label for="waga">waga</label>
+    <input type="text" name="waga" id="waga" >
+</div>
+<div class="formc">
+  <label for="dataWaznosci">dataWaznosci</label>
+  <input type="text" name="dataWaznosci" id="dataWaznosci">
+</div>
+<div class="formc">
+  <label for="FK_idCukiernik">ID cukiernika</label>
+  <input type="text" name="FK_idCukiernik" id="FK_idCukiernik">
+</div>
+    <button class="buttonx" type="delete">Usun </button>
+</form>
+</div>
+<%- include('partials/footer') %>
+</body>
+</html>

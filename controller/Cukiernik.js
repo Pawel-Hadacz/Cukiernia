@@ -34,6 +34,7 @@ exports.DodajKontrolerCukienika = (req,res,next)=>{
         path: '/dodajcukiernika',
       });
    }
+   
     exports.DodajCukiernikaDoBazy = (req,res,next)=>{
     const imie = req.body.imie;
     const nazwisko = req.body.nazwisko;

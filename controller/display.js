@@ -25,6 +25,19 @@ exports.getCreams = (req, res, next) => {
       })
       .catch(err => console.log(err));
   };
+  exports.postDelete = (req, res, next) => {
+    
+    const smak = req.body.smak;
+    const cena = req.body.cena;
+    const waga = req.body.waga;
+    const dataWaznosci = req.body.dataWaznosci;
+    const FK_idCukiernik = req.body.FK_idCukiernik;
+     const lod = new Lody(null,smak, cena, waga, dataWaznosci,FK_idCukiernik);
+     
+    //lod.delete();
+    console.log(lod);
+    res.redirect('/');
+  };
 
 exports.AddClientController = (req,res,next)=>{
     Lody.fetchAll()

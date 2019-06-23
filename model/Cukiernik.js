@@ -15,14 +15,14 @@ module.exports = class Cukiernik {
         [this.imie, this.nazwisko, this.wiek]
       );
     }
-    static deleteById(idCukiernik) {}
+    
     static fetchAll() {
       return db.execute('SELECT * FROM Cukiernik');
     }
-  
-    static findById(pesel) {
-      return db.execute('SELECT * FROM Cukiernik WHERE pesel = ?', [idCukiernik]);
+    static delete() {
+      return db.execute('DELETE * FROM Cukiernik');
     }
+  
     
       
 }

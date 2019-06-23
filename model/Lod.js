@@ -15,14 +15,14 @@ module.exports = class Lod {
         [this.smak, this.cena, this.waga, this.dataWaznosci, this.FK_idCukiernik]
       );
     }
-    static deleteById(id) {}
+     delete() {
+      return db.execute('DELETE * FROM Lody WHERE id =?',[this.id]);
+    }
     static fetchAll() {
       return db.execute('SELECT * FROM Lody');
     }
   
-    static findById(id) {
-      return db.execute('SELECT * FROM Lody WHERE Lody.id = ?', [id]);
-    }
+    
     
       
 }

@@ -2,6 +2,20 @@ body{
     padding: 0;
     margin: 0;
 }
+
+.formc
+{
+    border :2px, solid black;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 5px;
+}
+.formc input:hover{
+    background-color: #91c5da;
+} 
+.formc textarea{
+    display: block;
+}
 .header {
     width: auto;
     height: 100%;
