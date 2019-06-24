@@ -1,29 +1,13 @@
 const  Lody = require('../model/Lod')
 const {validationResult} = require('express-validator/check');
-/* exports.AddCreams = (req, res, next) => {
-    const isAdded = req
-    .get('Cookie')
-    .split(';')[1]
-    .trim()
-    .split('=')[1];
-    res.render('/add-creams', {
-      Head: 'Adding',
-      path: '/editing',
-      isAuthenticated: isAdded
-     
-    });
-  };
-  exports.AddedCreams = (req, res, next) => {
-    res.setHeader('Set-Cookie', 'isAdded=true');
-    res.redirect('/');
-  };
-*/
+
 exports.FromDBlody = (req, res, next) => {
     Lody.fetchAll(smak => {
       res.render('creams', {
         smaki: smak,
         Head: 'Lody',
-        path: '/'
+        path: '/',
+        zalogowany: req.isCookie
       });
     });
   };
@@ -36,6 +20,7 @@ exports.FromDBlody = (req, res, next) => {
     res.render('usunlody', {
         Head: 'usuwanie lodów',
         path: '/usunlody',
+        zalogowany: req.isCookie
       });
    }
 
@@ -43,6 +28,7 @@ exports.AddLodController = (req,res,next)=>{
     res.render('editing', {
         Head: 'Editing',
         path: '/editing',
+        zalogowany: req.isCookie
       });
    }
    exports.postDelete = (req, res, next) => {
@@ -59,6 +45,18 @@ exports.AddLodController = (req,res,next)=>{
     res.redirect('/');
   };
     exports.AddLodController2 = (req,res,next)=>{
+    const valid = validationResult(req);
+    if(!valid.isEmpty()){
+      console.log(valid.array());
+      return res.render('editing', {
+        
+        Head: 'Editing',
+        path: '/editing',
+        zalogowany: req.isCookie
+        
+       
+      });;
+    }
     const smak = req.body.smak;
     const cena = req.body.cena;
     const waga = req.body.waga;

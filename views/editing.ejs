@@ -2,8 +2,10 @@
 <body>
     
   <%- include('partials/nav') %>
+  
 <div class="main">  
-  <form class="fomrularz" action="/add-creams" method="POST">
+    
+  <form class="fomrularz" action="/add-creams" method="POST" novalidate>
     <div class="formc">
         <label for="smak">smak</label>
         <input type="text" name="smak" id="smak" >
@@ -26,6 +28,7 @@
 </div>
     <button class="buttonx" type="submit">Dodaj </button>
 </form>
+
 </div>
 <%- include('partials/footer') %>
 </body>

@@ -1,41 +1,38 @@
 const  Cukiernik = require('../model/Cukiernik')
 const {validationResult} = require('express-validator/check');
-/* exports.AddCreams = (req, res, next) => {
-    const isAdded = req
-    .get('Cookie')
-    .split(';')[1]
-    .trim()
-    .split('=')[1];
-    res.render('/add-creams', {
-      Head: 'Adding',
-      path: '/editing',
-      isAuthenticated: isAdded
-     
-    });
-  };
-  exports.AddedCreams = (req, res, next) => {
-    res.setHeader('Set-Cookie', 'isAdded=true');
-    res.redirect('/');
-  };
-*/
+
 exports.FromDBlody = (req, res, next) => {
     Cukiernik.fetchAll(nazwa => {
       res.render('creams', {
         smaki: smak,
         Head: 'Lody',
-        path: '/'
+        path: '/',
+        zalogowany: req.isCookie
       });
     });
   };
 
 exports.DodajKontrolerCukienika = (req,res,next)=>{
+  res.isAdded = true;
     res.render('dodajcukiernika', {
         Head: 'dodawanie cukiernika',
         path: '/dodajcukiernika',
+        zalogowany: req.isCookie
       });
    }
    
     exports.DodajCukiernikaDoBazy = (req,res,next)=>{
+      const valid = validationResult(req);
+    if(!valid.isEmpty()){
+      console.log(valid.array());
+      return res.render('dodajcukiernika', {
+        Head: 'dodawanie cukiernika',
+        path: '/dodajcukiernika',
+        zalogowany: req.isCookie
+       
+
+      });
+    }
     const imie = req.body.imie;
     const nazwisko = req.body.nazwisko;
     const wiek = req.body.wiek;

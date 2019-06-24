@@ -8,7 +8,8 @@ exports.getCreams = (req, res, next) => {
         res.render('creams', {
           smaki: smak,
           Head: 'CREAMS',
-          path: '/creams'
+          path: '/creams',
+          zalogowany: req.isCookie
         });
       })
       .catch(err => console.log(err));
@@ -20,6 +21,7 @@ exports.getCreams = (req, res, next) => {
           cuk: c,
           Head: 'Cukiernicy',
           path: '/cukiernicy',
+          zalogowany: req.isCookie
           });
         
       })
@@ -46,6 +48,7 @@ exports.AddClientController = (req,res,next)=>{
         smaki: smak,
         Head: 'Client',
         path: '/',
+        zalogowany: req.isCookie
          });
     });
 }
@@ -56,6 +59,7 @@ exports.AddClientCukiernikController = (req,res,next)=>{
       cuk: c,
       Head: 'Cukienikilod',
       path: '/',
+      zalogowany: req.isCookie
        });
   });
 }

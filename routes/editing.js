@@ -8,7 +8,7 @@ const {check} = require = require('express-validator/check');
 //router.get('/add-creams',LodyControllery.AddCreams);
 //router.post('/creams',LodyControllery.AddedCreams);
 router.get('/add-creams',LodyControllery.AddLodController);
-router.post('/add-creams',LodyControllery.AddLodController2);
+router.post('/add-creams',check('smak').isString(),check('cena').isDecimal().withMessage('tylko liczby'),check('waga').isDecimal().withMessage('tylko liczby'),LodyControllery.AddLodController2);
 router.post('/creams',LodyControllery.ToDBController);
 router.get('/usunlody',LodyControllery.UsunLodyKontroler);
 router.post('/usunlody',LodyControllery.postDelete);

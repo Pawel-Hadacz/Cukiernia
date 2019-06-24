@@ -6,9 +6,12 @@
     <li><a class="<%= path === '/' ? 'active' : '' %>" href="/">Strona główna</a></li>
     <li><a class="<%= path === '/add-creams' ? 'active' : '' %>" href="/add-creams">Lody dodawanie</a>
     <li><a class="<%= path === '/add-creams' ? 'active' : '' %>" href="/creams">Lody</a>
-    <li><a class="<%= path === '/dodajcukiernika' ? 'active' : '' %>" href="/dodajcukiernika">Dodaj Cukiernika</a>
+      <% if (zalogowany) { %>
+      <li><a class="<%= path === '/dodajcukiernika' ? 'active' : '' %>" href="/dodajcukiernika">Dodaj Cukiernika</a>
     <li><a class="<%= path === '/cukiernicy' ? 'active' : '' %>" href="/cukiernicy">Cukiernicy</a>
+      <% } %>
       <li><a class="<%= path === '/usunlody' ? 'active' : '' %>" href="/usunlody">Usun lody</a>
+        <li><a class="<%= path === '/cookie' ? 'active' : '' %>" href="/cookie">Cookies</a>
 
 </ul>
 </div>
